@@ -1,24 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const DisplayPosts = (props) =>{
-      let singleName =  props.displayPost.map(post =>{
-          return <div>{post.name}</div>    
-})
-      let singlePost =  props.displayPost.map(post =>{
-          return <div>{post.post}</div>    
-})
-return(
-    <div>
+const DisplayPosts = (props) => {
+  let singlePost = props.displayPost.map((post) => {
+    return (
+      <div>
         <div>
-            {singleName}
-            {singlePost}
+          {post.name} {post.post}
         </div>
         <button>like</button>
         <button>dislike</button>
-    </div>
-    
-)
-}
-
+      </div>
+    );
+  });
+  return <div>{singlePost}</div>;
+};
 
 export default DisplayPosts;
