@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const DisplayPosts = (props) => {
+  useEffect(() => {
+    console.log(props.name);
+  });
+
   return (
     <div>
       <div>{props.name}</div>

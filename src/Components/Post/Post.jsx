@@ -1,15 +1,13 @@
 import React from "react";
-import { format } from "date-fns";
+import Button from "../Button/Button";
+import DisplayPosts from "../DisplayPosts/DisplayPosts";
 
 const Post = (props) => {
-  let singlePost = props.post.map((post) => {
+  let singlePost = props.posts.map((post) => {
     return (
       <div>
-        <div>{post.name}</div>
-        <div>{post.post}</div>
-        <div>{post.date}</div>
-        <button>like</button>
-        <button>dislike</button>
+        <DisplayPosts name={post.name} post={post.post} date={post.date} />
+        <Button onClick={props.handleClick}>{props.like}</Button>
       </div>
     );
   });
