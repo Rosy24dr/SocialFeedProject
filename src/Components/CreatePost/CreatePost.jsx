@@ -3,12 +3,14 @@ import React, { useState } from "react";
 const CreatePost = (props) => {
   const [name, setName] = useState("");
   const [post, setPost] = useState("");
+  const [date, setDate] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
     let newEntry = {
       name: name,
       post: post,
+      date: date,
     };
     console.log(newEntry);
     props.createNewPost(newEntry);
@@ -16,7 +18,7 @@ const CreatePost = (props) => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>User Name</label>
+        <label>Name</label>
         <input
           type="name"
           value={name}
@@ -29,6 +31,14 @@ const CreatePost = (props) => {
           type="post"
           value={post}
           onChange={(event) => setPost(event.target.value)}
+        />
+      </div>
+      <div>
+        <label>Date</label>
+        <input
+          type="date"
+          value={date}
+          onChange={(event) => setDate(event.target.value)}
         />
       </div>
       <button>Create</button>
