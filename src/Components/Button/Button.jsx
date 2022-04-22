@@ -23,13 +23,13 @@ const Button = (props) => {
         setDislikeButton('active')
     }
 
-  function handleClick() {
-    if (likeButton === "active") {
-      setDislikeButton("inactive");
-    } else if(dislikeButton === "inactive"){
-      setLikeButton("active");
-    }
-  } 
+//   function handleClick() {
+//     if (likeButton === "active") {
+//       setDislikeButton("inactive");
+//     } else if(dislikeButton === "inactive"){
+//       setLikeButton("active");
+//     }
+//   } 
   return (
     <div>
       <button className={likeButton} onClick={toggle}>like</button>
