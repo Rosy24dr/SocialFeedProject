@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button/Button";
+import Button from "../Button/Button"
 import DisplayPosts from "../DisplayPosts/DisplayPosts";
 
 const Post = (props) => {
@@ -7,7 +7,7 @@ const Post = (props) => {
     return (
       <div>
         <DisplayPosts name={post.name} post={post.post} date={post.date} />
-        <Button onClick={props.handleClick}>{props.like}</Button>
+        <Button className="button" onClick={props.handleClick}></Button>
       </div>
     );
   });
