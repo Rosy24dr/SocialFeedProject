@@ -1,39 +1,34 @@
 import React, { useState } from "react";
-import "./Button.css"
+import "./Button.css";
 
 const Button = (props) => {
-    // const [status, setStatus]= useState(true);
-    // const toggle=() =>{
-    //     setStatus(!status)
-    // }
-    // return (
-    //     <div>
-    //       <button onClick={toggle} className={(status ? 'active':"")}>
-    //         {status ? 'like' : 'dislike'}
-    //       </button>
-    //     </div>
-    //   );
-
-
-  const [likeButton, setLikeButton] = useState('active');
+  const [likeButton, setLikeButton] = useState('inactive');
   const [dislikeButton, setDislikeButton] = useState('inactive');
 
-  const toggle=() =>{
-        setLikeButton('inactive')
-        setDislikeButton('active')
+  const likeToggle = () => {
+    if (likeButton === 'inactive') {
+      setLikeButton('active');
+    } else {
+      setLikeButton('inactive');
     }
+  };
 
-//   function handleClick() {
-//     if (likeButton === "active") {
-//       setDislikeButton("inactive");
-//     } else if(dislikeButton === "inactive"){
-//       setLikeButton("active");
-//     }
-//   } 
+  const dislikeToggle = () => {
+    if (dislikeButton === 'inactive') {
+      setDislikeButton('active');
+    } else {
+      setDislikeButton('inactive');
+    }
+  };
+
   return (
     <div>
-      <button className={likeButton} onClick={toggle}>like</button>
-      <button className={dislikeButton} onClick={toggle}>dislike</button>
+      <button type="button" className={likeButton} onClick={likeToggle}>
+        like
+      </button>
+      <button type="button" className={dislikeButton} onClick={dislikeToggle}>
+        dislike
+      </button>
     </div>
   );
 };

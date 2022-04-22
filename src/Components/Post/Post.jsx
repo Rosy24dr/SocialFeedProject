@@ -7,7 +7,7 @@ const Post = (props) => {
     return (
       <div>
         <DisplayPosts name={post.name} post={post.post} date={post.date} />
-        <Button className="button" onClick={props.handleClick}></Button>
+        <Button onClick={props.handleClick}></Button>
       </div>
     );
   });
