@@ -1,0 +1,15 @@
+.inputOne{
+    width: 300px;
+    font-size: 14pt;
+    height: 20px;
+}
+
+.inputTwo{
+    width: 300px;
+    height: 45px;
+    font-size: 14pt;
+}
+
+label{
+    width: 60px;
+}

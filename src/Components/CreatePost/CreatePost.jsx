@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CreatePost.css"
 
 const CreatePost = (props) => {
   const [name, setName] = useState("");
@@ -20,6 +21,7 @@ const CreatePost = (props) => {
       <div>
         <label for="userName">Name</label>
         <input
+          className="inputOne"
           type="text"
           name="userName"
           value={name}
@@ -29,6 +31,7 @@ const CreatePost = (props) => {
       <div>
         <label for="post">Post</label>
         <input
+          className="inputTwo"
           type="text"
           name="post"
           value={post}

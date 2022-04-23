@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Button.css";
+import { FaRegThumbsUp,FaRegThumbsDown } from "react-icons/fa";
 
 const Button = (props) => {
   const [likeButton, setLikeButton] = useState('inactive');
@@ -7,7 +8,8 @@ const Button = (props) => {
 
   const likeToggle = () => {
     if (likeButton === 'inactive') {
-      setLikeButton('active');
+      setLikeButton('likeActive');
+      setDislikeButton('inactive');
     } else {
       setLikeButton('inactive');
     }
@@ -15,7 +17,8 @@ const Button = (props) => {
 
   const dislikeToggle = () => {
     if (dislikeButton === 'inactive') {
-      setDislikeButton('active');
+      setDislikeButton('dislikeActive');
+      setLikeButton('inactive')
     } else {
       setDislikeButton('inactive');
     }
@@ -24,10 +27,11 @@ const Button = (props) => {
   return (
     <div>
       <button type="button" className={likeButton} onClick={likeToggle}>
-        like
+        <FaRegThumbsUp/>
       </button>
+      
       <button type="button" className={dislikeButton} onClick={dislikeToggle}>
-        dislike
+        <FaRegThumbsDown/>
       </button>
     </div>
   );

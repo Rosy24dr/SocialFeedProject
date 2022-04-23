@@ -1,0 +1,33 @@
+
+h1{
+    background-color: white;
+    color:black;
+    padding-bottom: 10px;
+    font-family: "Sofia", monospace;
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+
+}
+
+.entry{
+    background-color: white; 
+    border: 1px solid black;
+    border-radius: 20px;
+    /* text-align: center; */
+    font-size: 15px;
+    padding: 39px;
+    display: flexbox;
+}
+
+.post{
+    background-color: white; 
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.body{
+    background-color: #426661;
+    margin: 0%;
+}

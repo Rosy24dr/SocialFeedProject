@@ -1,7 +1,27 @@
-.active{
-    background-color: green;
-}
-
 .inactive{
     background-color: white;
+}
+
+.likeActive{
+    background-color: rgb(8, 235, 39);
+}
+.likeActive:hover{
+    background-color: rgb(8, 235, 39);
+    color:whitesmoke
+}
+
+
+.dislikeActive{
+    background-color: red;
+
+}
+
+.dislikeActive:hover{
+    background-color: rgb(238, 25, 25);
+    color: whitesmoke;
+
+}
+
+button{
+    float:right;
 }

@@ -6,7 +6,7 @@ const DisplayPosts = (props) => {
   });
 
   return (
-    <div>
+    <div >
       <div>{props.name}</div>
       <div>{props.post}</div>
       <div>{props.date}</div>
